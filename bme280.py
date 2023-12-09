@@ -59,7 +59,8 @@ class Bme280base:
         self._humid = None
         # Check if BME280
         if self._readU8(Reg.ID) != Reg.ID_VAL:
-            raise RuntimeError("Not a BME280")
+            #raise RuntimeError("Not a BME280")
+            pass
         # Reset the chip
         self._reset()
         sleep(0.5)
